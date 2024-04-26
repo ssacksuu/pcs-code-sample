@@ -20,9 +20,9 @@ jobs:
       with:
         directory: code/
         #soft_fail: true
-        #api-key: ${{ secrets.BC_API_KEY }}
-      #env:
-        #PRISMA_API_URL: https://api.sg.prismacloud.io
+        api-key: ${{ secrets.BC_API_KEY }}
+      env:
+        PRISMA_API_URL: https://api.sg.prismacloud.io
         
     - name: Upload SARIF file
       uses: GitHub/codeql-action/upload-sarif@v3
